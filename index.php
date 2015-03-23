@@ -46,7 +46,7 @@ session_start();
           href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css"/>
 
 </head>
-<!--Facebook Widget-->
+
 <body class="no-trans">
 <noscript class="text-center">
     <h1>Javascript Disabled!</h1>
@@ -62,6 +62,7 @@ session_start();
     </style>
 </noscript>
 
+<!--Facebook Widget-->
 <div id="fb-root"></div>
 <script>(function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -139,24 +140,14 @@ session_start();
                                         <ul class="nav navbar-nav navbar-right">
                                             <li class="active"><a href="#home">Home</a></li>
                                             <?php
-                                            $sql = 'SELECT * FROM section ORDER BY `order`';
+                                            $sql = 'SELECT * FROM `section` ORDER BY `order`';
                                             $result = mysqli_query($con, $sql);
                                             while ($row = mysqli_fetch_array($result)) {
-                                                if ($row['parent'] > 0) {
-                                                    genNavBar($row);
-                                                } else {
-                                                    echo '<li><a href="#' . $row["slug"] . '">' . $row["name"] . '</a></li>';
-                                                }
+                                                echo '<li><a href="#' . $row["slug"] . '">' . $row["name"] . '</a></li>';
                                             }
-
-                                            function genNavBar($row)
-                                            {
-                                            }
-
                                             ?>
                                         </ul>
                                     </div>
-
                                 </div>
                             </nav>
                             <!-- navbar end -->
@@ -297,7 +288,7 @@ session_start();
     </footer>
 
     <!-- Modals -->
-    <!-- Modal -->
+    <!-- Login Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
