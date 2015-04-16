@@ -237,10 +237,7 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] && isset($_SESSION['use
                         <h1><?php echo $section['name']; ?></h1>
 
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item"
-                                    src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=se84kndcbippuj0tqcrv7e66tg%40group.calendar.google.com&amp;color=%230F4B38&amp;ctz=America%2FNew_York"
-                                    style=" border-width:0;background-color:#E1FAF2" frameborder="0" scrolling="no"
-                                    align="center"></iframe>
+                            <iframe class="embed-responsive-item" src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=5h6v39n9q0bcrqs54aq43o3a7g%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=America%2FNew_York" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe>
                         </div>
                     </div>
                 <?php } //Donors section
